@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: grid;
+            place-items: center;
+        }
+        .box{
+            width: 60vw;
+            height: 60vh;
+            background-color: black;
+            display: grid;
+            place-items: center;
+        }
+        .gola{
+            height: 80px;
+            width: 80px;
+            background-color: black;
+            animation: rotate 4s linear infinite;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg) scale(1,1);
+               
+                background-image: linear-gradient(45deg, rgb(220, 235, 10),rgb(7, 104, 7));
+
+                border-radius: 0%;
+            }
+            25%{
+                transform: rotate(90deg) scale(1,2);
+                background-image: linear-gradient(45deg, rgb(14, 44, 177),rgb(252, 145, 252));
+                border-radius: 25%;
+            }
+            50%{
+                transform: rotate(180deg) scale(2,2);
+                background-image: linear-gradient(45deg, rgb(212, 12, 105),rgb(106, 175, 240));
+                border-radius: 50%;
+            }
+            75%{
+                transform: rotate(270deg) scale(2,1);
+                background-image: linear-gradient(45deg, rgb(96, 10, 175),rgb(240, 220, 38));
+                
+                border-radius: 25%;
+            }
+            100%{
+                transform: rotate(360deg) scale(1,1);
+                background-image: linear-gradient(45deg, white,rgba(245, 139, 19, 0.904));
+                border-radius: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="gola"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            box-shadow: none;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            place-items: center;
+            background-color: black;
+        }
+        .main{
+            display: grid;
+            place-items: center;
+        }
+        .ball{
+
+            height: 50px;
+            width: 50px;
+            position: relative;
+            border-radius: 100%;
+
+        }
+        #ball1{
+            animation: ball1 2s linear infinite;
+            background-color: red;
+            
+        }
+        #ball5{
+            animation: ball5 2s linear infinite;
+            background-color: blue;
+            animation-delay: 0.25s;
+        }
+        #ball2{
+            animation: ball2 2s linear infinite;
+            top: 50px;
+            background-color: green;
+            animation-delay: 0.5s;
+        }
+        #ball4{
+            animation: ball4 2s linear infinite;
+            top: -50px;
+            background-color: yellow;
+            animation-delay: 0.75s;
+        }
+        @keyframes ball1{
+            0%{
+                top: 100px;
+            }
+            12.5%{
+                top: 50px;
+            }
+            25%{
+                top: 50px;
+            }
+            37.5%{
+                top: 50px;
+            }
+            50%{
+                top: 100px;
+            }
+            62.5%{
+                top: 100px;
+            }
+            75%{
+                top: 100px;
+            }
+            87.5%{
+                top: 100px;
+            }
+            100%{
+                top: 100px;
+            }
+        }  
+        @keyframes ball5{
+            0%{
+                top: -100px;
+            }
+            12.5%{
+                top: -50px;
+            }
+            25%{
+                top: -50px;
+            }
+            37.5%{
+                top: -50px;
+            }
+            50%{
+                top: -100px;
+            }
+            62.5%{
+                top: -100px;
+            }
+            75%{
+                top: -100px;
+            }
+            87.5%{
+                top: -100px;
+            }
+            100%{
+                top: -100px;
+            }
+        }
+       
+        @keyframes ball2{
+            0%{
+                right: 0px;
+            }
+            12.5%{
+                right: 50px;
+            }
+            25%{
+                right: 50px;
+                
+            }
+            37.5%{
+                right: 50px;
+            }
+            50%{
+                right: 0px;
+            }
+            62.5%{
+                right: 0px;
+            }
+            75%{
+                right: 0px;
+            }
+            87.5%{
+                right: 0px;
+            }
+            100%{
+                right: 0px;
+            }
+        }
+       
+        @keyframes ball4{
+            0%{
+                right: 0px;
+            }
+            12.5%{
+                right: -50px;
+            }
+            25%{
+                right: -50px;
+            }
+            37.5%{
+                right: -50px;
+            }
+            50%{
+                right: -0px;
+            }
+            62.5%{
+                right: -0px;
+            }
+            75%{
+                right: -0px;
+            }
+            87.5%{
+                right: -0px;
+            }
+            100%{
+                right: -0px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="ball1" class="ball"></div>
+        <div id="ball2" class="ball"></div>
+        <div id="ball3" class="ball"></div>
+        <div id="ball4" class="ball"></div>
+        <div id="ball5" class="ball"></div>
+    </div>
+   
+</body>
+<script>
+    const ball1 = document.getElementById('ball1');
+    const ball2 = document.getElementById('ball2');
+    const ball4 = document.getElementById('ball4');
+    const ball5 = document.getElementById('ball5');
+    console.log(ball1);
+    console.log(ball2);
+    console.log(ball4);
+    console.log(ball5);
+    setInterval(() => {
+       ball1.style.zIndex = `${Math.ceil(Math.random()*10)}`;
+       ball2.style.zIndex = `${Math.ceil(Math.random()*10)}`;
+       ball4.style.zIndex = `${Math.ceil(Math.random()*10)}`;
+       ball5.style.zIndex = `${Math.ceil(Math.random()*10)}`; 
+       
+    }, 2000);
+</script>
+</html>

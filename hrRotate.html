@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            background-color: black;
+            overflow: hidden;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main2{
+            border: 2px solid rgb(120, 34, 218);
+            border-radius: 50%;
+            height: 15vh;
+            width: 20vw;
+            position: absolute;
+        }
+        /* transform: rotateX(0deg) rotateY(0deg);*/
+    </style>
+</head>
+<body>
+    <div class="main">
+    </div>
+</body>
+
+<script>
+     var x=0,w=20;
+     console.log("AKHIL"); 
+     setInterval(() => {
+    let element = document.createElement('div');
+          let ol=document.querySelector('.main');
+         
+          element.classList.add('main2');
+          if(x%10==0)
+          {
+              element.style.width = `${w+=0.1}vw`;
+          }
+                      element.style.transform = `rotateZ(${x+=5}deg)`;
+                      ol.appendChild(element);
+  }, 50);
+
+   
+  console.log("1");
+  </script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;        
+            overflow: hidden;
+            display: grid;
+            place-content: center;
+            background-color: black;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            width: 500px;    
+        }
+        .ball{
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+            animation: bounce 1s linear infinite;
+            position: relative;
+        }
+        @keyframes rotate {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes bounce {
+            0%{
+                top: 0px;
+            }
+            25%{
+                top: -50px;
+            }
+            50%{
+                top: 0px;
+            }
+            75%{
+                top: 50px;
+            }
+            100%{
+                top: 0px;
+            }
+        }
+        #ball1{
+             background-color: red;
+        }
+        #ball2{
+            background-color: blue;
+            animation-delay: 0.25s;
+        }
+        #ball3{
+            background-color: yellow;   
+            animation-delay: 0.50s;
+        }
+        #ball4{
+            background-color: green;
+            animation-delay: 0.75s;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="ball1" class="ball"></div>
+        <div id="ball2" class="ball"></div>
+        <div id="ball3" class="ball"></div>
+        <div id="ball4" class="ball"></div>
+    </div>
+</body>
+</html>
